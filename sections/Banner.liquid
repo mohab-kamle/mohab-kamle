@@ -1,0 +1,80 @@
+<section class="banner">
+  <div class="banner__content">
+    {% comment %} navbar {% endcomment %}
+    <div class="navbar">
+      <p class="banner__title">{{ section.settings.title }}</p>
+
+      <p class="banner__middleText">{{ section.settings.middleText }}</p>
+      {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
+    </div>
+    {% comment %} banner image (Desktop only) {% endcomment %}
+    <div class="banner__image">
+      <img src="{{ "banner_main.png" | asset_url }}" alt="" width="100%" height="100%">
+    </div>
+    {% comment %} banner Hero {% endcomment %}
+    <div class="banner__hero">
+      <div class="banner__hero-content">
+        <p class="banner__hero-title">{{ section.settings.hero_title }}</p>
+        <p class="banner__hero-middleText">{{ section.settings.hero_middle_text }}</p>
+        {%- render 'button', button_text: section.settings.hero_button_text, button_style: 'black' -%}
+      </div>
+      <div class="banner__hero-image-container">
+        <img src="{{ "banner_hero.png" | asset_url }}" alt="banner hero" width="100%" height="100%" class="banner__hero-image">
+      </div>
+    </div>
+    {% comment %} banner footer {% endcomment %}
+    <div class="banner__footer">
+      <p class="banner__footer-text">{{ section.settings.footer_text }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "TISSO VISON"
+    },
+    {
+      "type": "text",
+      "id": "middleText",
+      "label": "middleText",
+      "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "buttonText",
+      "label": "buttonText",
+      "default": "CHOOSE GIFT"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "text",
+      "id": "hero_middle_text",
+      "label": "Hero Middle Text",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "hero_button_text",
+      "label": "Hero Button Text",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "text",
+      "id": "footer_text",
+      "label": "Footer Text",
+      "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    }
+  ]
+}
+{% endschema %}

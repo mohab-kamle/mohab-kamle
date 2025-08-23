@@ -4,11 +4,11 @@
 <section class="custom-product-grid">
   <p class="product-grid-title">{{ section.settings.title }}</p>
   <div class="product-grid">
-    {% comment %} {% for block in section.blocks %} {% endcomment %}
-    {% comment %} {% if block.settings.product != blank %} {% endcomment %}
-    {% for p in collections.all.products %}
-      {% comment %} {% assign product = block.settings.product %} {% endcomment %}
-      {% assign product = p %}
+    {% for block in section.blocks %}
+    {% if block.settings.product != blank %}
+    {% comment %} {% for p in collections.all.products %} {% endcomment %}
+      {% assign product = block.settings.product %}
+      {% comment %} {% assign product = p %} {% endcomment %}
       <div class="product-image-container">
         {% if product.featured_image %}
           <img
@@ -30,7 +30,7 @@
 
         {% endif %}
       </div>
-      {% comment %} {% endif %} {% endcomment %}
+      {% endif %}
     {% endfor %}
   </div>
 </section>

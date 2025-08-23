@@ -61,11 +61,13 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggleContainer = document.querySelector('.mobile-menu-toggle-container');
   const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   
   if (mobileMenuToggle && mobileMenu) {
     mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuToggleContainer.classList.toggle('active');
       mobileMenuToggle.classList.toggle('active');
       mobileMenu.classList.toggle('active');
     });
@@ -73,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking on menu items
     mobileMenu.addEventListener('click', function(e) {
       if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+        mobileMenuToggleContainer.classList.remove('active');
         mobileMenuToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
       }

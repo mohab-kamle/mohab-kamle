@@ -14,60 +14,75 @@
       "settings": {
         "title": "TISSO VISON",
         "middleText": "Find the ideal gift for your loved ones.",
+        "hero_middle_text_desktop": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
+        "hero_middle_text_mobile": "Discover Joy: Your Ultimate Holiday Gift Destination.",
         "buttonText": "CHOOSE GIFT",
         "hero_title": "The Gift Guide",
         "hero_middle_text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
         "hero_button_text": "SHOP NOW",
-        "footer_text": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+        "footer_text_desktop": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL",
+        "footer_text_mobile": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
       }
     },
     "Product_Grid": {
       "type": "Product_Grid",
       "blocks": {
-        "product_9QJ4ry": {
-          "type": "product",
-          "settings": {
-            "product": "black-leather-bag"
-          }
-        },
         "product_aBYzQy": {
           "type": "product",
           "settings": {
-            "product": "blue-silk-tuxedo"
+            "product": "blue-silk-tuxedo",
+            "x_pos": 50,
+            "y_pos": 50
           }
         },
         "product_RrmTyr": {
           "type": "product",
           "settings": {
-            "product": "chequered-red-shirt"
+            "product": "chequered-red-shirt",
+            "x_pos": 50,
+            "y_pos": 50
           }
         },
         "product_WgRN8V": {
           "type": "product",
           "settings": {
-            "product": "classic-leather-jacket"
+            "product": "classic-leather-jacket",
+            "x_pos": 50,
+            "y_pos": 50
           }
         },
         "product_KN6JcJ": {
           "type": "product",
           "settings": {
-            "product": "classic-varsity-top"
+            "product": "classic-varsity-top",
+            "x_pos": 50,
+            "y_pos": 50
           }
         },
         "product_aWFbjh": {
           "type": "product",
           "settings": {
-            "product": "dark-denim-top"
+            "product": "dark-denim-top",
+            "x_pos": 50,
+            "y_pos": 50
+          }
+        },
+        "product_qJWtfj": {
+          "type": "product",
+          "settings": {
+            "product": "red-sports-tee",
+            "x_pos": 50,
+            "y_pos": 50
           }
         }
       },
       "block_order": [
-        "product_9QJ4ry",
         "product_aBYzQy",
         "product_RrmTyr",
         "product_WgRN8V",
         "product_KN6JcJ",
-        "product_aWFbjh"
+        "product_aWFbjh",
+        "product_qJWtfj"
       ],
       "settings": {
         "title": "Tisso vison in the wild"

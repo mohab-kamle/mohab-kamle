@@ -27,12 +27,20 @@
     "Product_Grid": {
       "type": "Product_Grid",
       "blocks": {
+        "product_qJWtfj": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag",
+            "x_pos": 60,
+            "y_pos": 60
+          }
+        },
         "product_aBYzQy": {
           "type": "product",
           "settings": {
             "product": "blue-silk-tuxedo",
             "x_pos": 50,
-            "y_pos": 70
+            "y_pos": 28
           }
         },
         "product_RrmTyr": {
@@ -66,23 +74,15 @@
             "x_pos": 50,
             "y_pos": 50
           }
-        },
-        "product_qJWtfj": {
-          "type": "product",
-          "settings": {
-            "product": "red-sports-tee",
-            "x_pos": 50,
-            "y_pos": 50
-          }
         }
       },
       "block_order": [
+        "product_qJWtfj",
         "product_aBYzQy",
         "product_RrmTyr",
         "product_WgRN8V",
         "product_KN6JcJ",
-        "product_aWFbjh",
-        "product_qJWtfj"
+        "product_aWFbjh"
       ],
       "settings": {
         "title": "Tisso vison in the wild"

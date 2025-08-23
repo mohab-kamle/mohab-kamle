@@ -93,8 +93,8 @@ addToCartBtn.addEventListener('click', async () => {
 
   // Bonus product logic
   if (selectedColor.toLowerCase() === 'black' && selectedSize.toLowerCase() === 'm') {
-    // Find Soft Winter Jacket variant
-    const bonusProductHandle = 'soft-winter-jacket';
+    // the handle in the imported data is dark-winter-jacket not soft-winter-jacket
+    const bonusProductHandle = 'dark-winter-jacket';
     const bonusRes = await fetch(`/products/${bonusProductHandle}.js`);
     const bonusProduct = await bonusRes.json();
     const bonusVariantId = bonusProduct.variants[0].id; // assume first variant

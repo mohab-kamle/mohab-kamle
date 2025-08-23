@@ -39,24 +39,24 @@
           "type": "product",
           "settings": {
             "product": "blue-silk-tuxedo",
-            "x_pos": 88,
-            "y_pos": 60
+            "x_pos": 85,
+            "y_pos": 55
           }
         },
         "product_RrmTyr": {
           "type": "product",
           "settings": {
             "product": "chequered-red-shirt",
-            "x_pos": 50,
-            "y_pos": 50
+            "x_pos": 75,
+            "y_pos": 25
           }
         },
         "product_WgRN8V": {
           "type": "product",
           "settings": {
             "product": "classic-leather-jacket",
-            "x_pos": 50,
-            "y_pos": 50
+            "x_pos": 75,
+            "y_pos": 25
           }
         },
         "product_KN6JcJ": {
@@ -64,15 +64,15 @@
           "settings": {
             "product": "classic-varsity-top",
             "x_pos": 50,
-            "y_pos": 50
+            "y_pos": 25
           }
         },
         "product_aWFbjh": {
           "type": "product",
           "settings": {
             "product": "dark-denim-top",
-            "x_pos": 50,
-            "y_pos": 50
+            "x_pos": 40,
+            "y_pos": 60
           }
         }
       },

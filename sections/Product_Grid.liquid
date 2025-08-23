@@ -2,41 +2,51 @@
   Custom 6-product grid section
 {% endcomment %}
 <section class="custom-product-grid">
-    <p class="product-grid-title">{{ section.settings.title }}</p>
-
+  <p class="product-grid-title">{{ section.settings.title }}</p>
   <div class="product-grid">
-    {% for block in section.blocks %}
-      {% if block.settings.product != blank %}
-        {% assign product = all_products[block.settings.product] %}
-        <div class="product-card">
-          <a href="{{ product.url }}">
-            <div class="product-image">
-              {% if product.featured_image %}
-                <img src="{{ product.featured_image | image_url: '400x' }}" alt="{{ product.title }}" width="100%" height="100%">
+    {% comment %} {% for block in section.blocks %} {% endcomment %}
+    {% comment %} {% if block.settings.product != blank %} {% endcomment %}
+    {% for p in collections.all.products %}
+      {% comment %} {% assign product = block.settings.product %} {% endcomment %}
+      {% assign product = p %}
+      <div class="product-image-container">
+        {% if product.featured_image %}
+          <img
+            src="{{ product.featured_image | image_url }}"
+            alt="{{ product.title }}"
+            loading="lazy"
+            class="product-image"
+            width="50%"
+            height="100%"
+          >
+          <!-- floating button -->
+          <button 
+  class="open-modal-btn" 
+  data-product-handle="{{ product.handle }}"
+  style="left: {{ 50}}%; top: {{ 50 }}%;">
+  <img src="{{ "plus.svg" | asset_url }}" alt="add to cart" width="20px" height="20px">
 
-              {% endif %}
-            </div>
-            <h3 class="product-title">{{ product.title }}</h3>
-            <p class="product-price">
-              {{ product.price | money }}
-            </p>
-          </a>
-        </div>
-      {% endif %}
+</button>
+
+        {% endif %}
+      </div>
+      {% comment %} {% endif %} {% endcomment %}
     {% endfor %}
   </div>
 </section>
 
+
+
 {% schema %}
 {
-    "settings": [
-        {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Tisso vison in the wild"
-        }
-    ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tisso vison in the wild"
+    }
+  ],
 
   "name": "6 Product Grid",
   "max_blocks": 6,
@@ -49,7 +59,9 @@
           "type": "product",
           "id": "product",
           "label": "Select Product"
-        }
+        },
+        { "type": "range", "id": "x_pos", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Button X Position", "default": 50 },
+        { "type": "range", "id": "y_pos", "min": 0, "max": 100, "step": 1, "unit": "%", "label": "Button Y Position", "default": 50 }
       ]
     }
   ],

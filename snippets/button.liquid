@@ -1,11 +1,15 @@
 {%- liquid
   assign button_text = button_text | default: 'Click here'
   assign button_style = button_style | default: 'black'
+  assign icon_size = icon_size | default: '25px'
+  assign icon_url = icon_url | default: 'Arrow 1.svg'
+  assign button_onclick = button_onclick | default: 'false'
+
 -%}
 
-<button class="button button--{{ button_style }}" type="button">
+<button class="button button--{{ button_style }}" type="button" onclick="{{ button_OnClick }}">
   {{ button_text }}
-  <img src="{{ 'Arrow 1.svg' | asset_url }}" alt="Right Arrow Icon" width="25px" height="auto" >
+  <img src="{{ icon_url | asset_url }}" alt="Right Arrow Icon" width="{{ icon_size }}" height="auto" >
 
 
 </button>

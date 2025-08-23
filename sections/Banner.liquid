@@ -2,10 +2,29 @@
   <div class="banner__content">
     {% comment %} navbar {% endcomment %}
     <div class="navbar">
-      <p class="banner__title">{{ section.settings.title }}</p>
-
-      <p class="banner__middleText">{{ section.settings.middleText }}</p>
-      {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
+      <!-- Mobile hamburger menu -->
+      <div class="mobile-menu-toggle-container">
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <div class="hamburger-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+        </div>
+        <p class="banner__title--mobile">{{ section.settings.title }}</p>
+      </div>
+      <!-- Desktop navigation -->
+      <div class="navbar-content">
+        <p class="banner__title">{{ section.settings.title }}</p>
+        <p class="banner__middleText">{{ section.settings.middleText }}</p>
+        {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
+      </div>
+      
+      <!-- Mobile navigation menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <p class="banner__middleText">{{ section.settings.middleText }}</p>
+        {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
+      </div>
     </div>
     {% comment %} banner image (Desktop only) {% endcomment %}
     <div class="banner__image">
@@ -15,20 +34,68 @@
     <div class="banner__hero">
       <div class="banner__hero-content">
         <p class="banner__hero-title">{{ section.settings.hero_title }}</p>
-        <p class="banner__hero-middleText">{{ section.settings.hero_middle_text }}</p>
+        <p class="banner__hero-middleText banner__hero-middleText--desktop">{{ section.settings.hero_middle_text_desktop }}</p>
+        <p class="banner__hero-middleText--mobile">{{ section.settings.hero_middle_text_mobile }}</p>
+
         {%- render 'button', button_text: section.settings.hero_button_text, button_style: 'black' -%}
       </div>
       <div class="banner__hero-image-container">
         <img src="{{ "banner_hero.png" | asset_url }}" alt="banner hero" width="100%" height="100%" class="banner__hero-image">
+        {%- render 'button', button_text: section.settings.hero_button_text, button_style: 'black' -%}
       </div>
     </div>
     {% comment %} banner footer {% endcomment %}
     <div class="banner__footer">
-      <p class="banner__footer-text">{{ section.settings.footer_text }}</p>
+        {%if section.settings.footer_text_mobile != blank%}
+        <p class="banner__footer-text footer-text--mobile">{{ section.settings.footer_text_mobile }}</p>
+        {%endif%}
+        {%if section.settings.footer_text_desktop != blank%}
+        <p class="banner__footer-text footer-text--desktop">{{ section.settings.footer_text_desktop }}</p>
+        {%endif%}
     </div>
   </div>
 </section>
+<style>
+  
+</style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on menu items
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+    
+    // Close menu on window resize if screen becomes larger
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 450) {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
 {% schema %}
 {
   "name": "Banner",
@@ -42,8 +109,19 @@
     {
       "type": "text",
       "id": "middleText",
-      "label": "middleText",
+      "label": "Middle Text",
       "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "hero_middle_text_desktop",
+      "label": "Hero Middle Text (Desktop)",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },{
+      "type": "text",
+      "id": "hero_middle_text_mobile",
+      "label": "Hero Middle Text (Mobile)",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
     },
     {
       "type": "text",
@@ -71,9 +149,15 @@
     },
     {
       "type": "text",
-      "id": "footer_text",
-      "label": "Footer Text",
+      "id": "footer_text_desktop",
+      "label": "Footer Text (Desktop)",
       "default": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
+    },
+    {
+      "type": "text",
+      "id": "footer_text_mobile",
+      "label": "Footer Text (Mobile)",
+      "default": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
     }
   ]
 }

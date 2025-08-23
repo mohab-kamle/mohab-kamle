@@ -1,0 +1,50 @@
+<div class="modal-overlay"></div>
+<div class="product-modal" id="productModal">
+  <div class="modal-content">
+    <button class="close-modal">
+      <img src="{{ 'icon_cross.svg' | asset_url }}" alt="Close" width="25" height="25">
+    </button>
+    <div class="product-container">
+      <div class="product-details">
+        <div id="modal-base">
+          <div id="modal-base-left">
+            <img id="modal-image" alt="Product image" loading="lazy" width="250" height="250">
+          </div>
+          <div id="modal-base-right">
+            <p id="modal-title"></p>
+            <div class="price" id="modal-price"></div>
+            <div class="description" id="modal-description"></div>
+          </div>
+        </div>
+        <div id="modal-base-middle">
+          <div id="modal-base-middle-top">
+            <p>Color</p>
+            <div id="color-options" class="color-options"></div>
+          </div>
+          <div id="modal-base-middle-bottom">
+            <p>Size</p>
+            <div class="size-container">
+              <div class="custom-dropdown">
+                <div class="dropdown-selected" id="dropdown-selected">
+                  <span class="selected-text">Choose your size</span>
+                  <button class="size-arrow">
+                    <img src="{{ 'icon_arrow_down.svg' | asset_url }}" alt="arrow" width="24" height="9">
+                  </button>
+                </div>
+                <div class="dropdown-options" id="dropdown-options">
+                  <!-- Options will be populated by JavaScript -->
+                </div>
+              </div>
+              <select id="size-select" class="size-dropdown" style="display: none;">
+                <option value="" disabled selected>Choose your size</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="modal-base-bottom">
+          {% render 'button', button_text: 'ADD TO CART', button_style: 'black' , icon_size: '30px' , button_onclick: 'getElementById('cart').addLine(event).showModal();' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,21 @@
+{%- comment -%}
+  Button Component
+  Description: A reusable button component with optional icon.
+  Accepts:
+  - button_text: Text to display on button (default: 'Click here')
+  - button_style: Style variant of button (default: 'black') 
+  - icon_size: Size of icon in pixels (default: '25px')
+  - icon_url: URL of icon image (default: 'icon_arrow_right.svg')
+  - button_onclick: onClick handler (default: 'false')
+{%- endcomment -%}
+
+
 {%- liquid
   assign button_text = button_text | default: 'Click here'
   assign button_style = button_style | default: 'black'
   assign icon_size = icon_size | default: '25px'
-  assign icon_url = icon_url | default: 'Arrow 1.svg'
+  assign icon_url = icon_url | default: 'icon_arrow_right.svg'
   assign button_onclick = button_onclick | default: 'false'
-
 -%}
 
 <button class="button button--{{ button_style }}" type="button" onclick="{{ button_OnClick }}">

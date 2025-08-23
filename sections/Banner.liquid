@@ -1,4 +1,4 @@
-<section class="banner">
+<section class="banner" id="bannerSpecial">
   <div class="banner__content">
     {% comment %} navbar {% endcomment %}
     <div class="navbar">
@@ -16,13 +16,13 @@
       <!-- Desktop navigation -->
       <div class="navbar-content">
         <p class="banner__title">{{ section.settings.title }}</p>
-        <p class="banner__middleText">{{ section.settings.middleText }}</p>
+        <p class="banner__middleText">{{ section.settings.middleText_desktop }}</p>
         {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
       </div>
       
       <!-- Mobile navigation menu -->
       <div class="mobile-menu" id="mobile-menu">
-        <p class="banner__middleText">{{ section.settings.middleText }}</p>
+        <p class="banner__middleText">{{ section.settings.middleText_mobile }}</p>
         {%- render 'button', button_text: section.settings.buttonText, button_style: 'yellow' -%}
       </div>
     </div>
@@ -111,9 +111,15 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       "type": "text",
-      "id": "middleText",
-      "label": "Middle Text",
+      "id": "middleText_desktop",
+      "label": "Middle Text (Desktop)",
       "default": "Find the ideal gift for your loved ones."
+    },
+    {
+      "type": "text",
+      "id": "middleText_mobile",
+      "label": "Middle Text (Mobile)",
+      "default": "Get started with your \"Mi Solo\" kit"
     },
     {
       "type": "text",

@@ -1,7 +1,7 @@
 {% comment %}
   Custom 6-product grid section
 {% endcomment %}
-<section class="custom-product-grid">
+<section class="custom-product-grid" id="productGridSpecial">
   <p class="product-grid-title">{{ section.settings.title }}</p>
   <div class="product-grid">
     {% for block in section.blocks %}
@@ -34,6 +34,9 @@
     {% endfor %}
   </div>
 </section>
+
+{% comment %} Render the product modal {% endcomment %}
+{% render 'product_modal' %}
 
 
 

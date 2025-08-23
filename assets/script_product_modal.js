@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('productModal');
+    const overlay = document.getElementById('modal-overlay');
+    
+    // Check if modal elements exist
+    if (!modal || !overlay) {
+        console.warn('Product modal elements not found');
+        return;
+    }
+    
     const closeBtn = modal.querySelector('.close-modal');
-    const overlay = document.querySelector('.modal-overlay');
 
     document.querySelectorAll('.open-modal-btn').forEach((btn) => {
       btn.addEventListener('click', async () => {
@@ -193,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // Show modal
           modal.style.display = 'flex';
-          overlay.style.display = 'block';
+          overlay.classList.add('active');
         } catch (err) {
           console.error(err);
         }
@@ -241,32 +248,33 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Close modal
-    closeBtn.onclick = () => {
+    // Close modal function
+    function closeModal() {
       modal.style.display = 'none';
-      overlay.style.display = 'none';
-      // Reset color selection when modal closes
+      overlay.classList.remove('active');       // Reset color selection when modal closes
       const colorContainer = document.getElementById('color-options');
-      colorContainer.classList.remove('has-selection');
+      if (colorContainer) {
+        colorContainer.classList.remove('has-selection');
+      }
       document.querySelectorAll('.color-option-container.selected').forEach((el) => el.classList.remove('selected'));
       // Reset size selection when modal closes
-      document.querySelector('.selected-text').textContent = 'Choose your size';
+      const selectedText = document.querySelector('.selected-text');
+      if (selectedText) {
+        selectedText.textContent = 'Choose your size';
+      }
       document.querySelectorAll('.dropdown-option').forEach((opt) => opt.classList.remove('selected'));
-      customDropdown.classList.remove('open');
-    };
-    overlay.onclick = () => {
-      modal.style.display = 'none';
-      overlay.style.display = 'none';
-      // Reset color selection when modal closes
-      const colorContainer = document.getElementById('color-options');
-      colorContainer.classList.remove('has-selection');
-      document.querySelectorAll('.color-option-container.selected').forEach((el) => el.classList.remove('selected'));
-      // Reset size selection when modal closes
-      document.querySelector('.selected-text').textContent = 'Choose your size';
-      document.querySelectorAll('.dropdown-option').forEach((opt) => opt.classList.remove('selected'));
-      customDropdown.classList.remove('open');
-    };
+      const customDropdown = document.querySelector('.custom-dropdown');
+      if (customDropdown) {
+        customDropdown.classList.remove('open');
+      }
+    }
+    
+    // Close modal event listeners
+    if (closeBtn) {
+      closeBtn.onclick = closeModal;
+    }
+    overlay.onclick = closeModal;
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.style.display = 'none';
+      if (e.target === modal) closeModal();
     });
   });

@@ -18,7 +18,7 @@
   assign button_onclick = button_onclick | default: 'false'
 -%}
 
-<button class="button button--{{ button_style }}" type="button" onclick="{{ button_OnClick }}">
+<button class="button--{{ button_style }}" type="button" onclick="{{ button_OnClick }}" id="buttonSpecial">
   {{ button_text }}
   <img src="{{ icon_url | asset_url }}" alt="Right Arrow Icon" width="{{ icon_size }}" height="auto" >
 

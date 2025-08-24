@@ -2,13 +2,13 @@
   {
     "name": "theme_info",
     "theme_name": "Dawn",
-    "theme_version": "15.4.0",
-    "theme_author": "Shopify",
+    "theme_version": "15.4.1",
+    "theme_author": "mohab",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "typography",
+    "name": "typography for test page",
     "settings": [
       {
         "type": "font_picker",

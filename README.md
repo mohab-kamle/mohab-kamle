@@ -2,6 +2,12 @@
 Software Engineer | React • UI Systems • SaaS Development
 
 ---
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?color=36BCF7&lines=Frontend+Engineer;Building+SaaS+Systems;React+%7C+Node+%7C+MySQL" />
+</p>
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mohab%20Kamal&fontSize=40&fontColor=ffffff"/>
+</p>
 
 ## 🚀 About Me
 I build production-ready web applications with a strong focus on **clean architecture, scalable systems, and UI consistency**.
@@ -19,25 +25,23 @@ Currently developing a **multi-tenant Lab Management SaaS** with role-based acce
 ---
 
 ## 🛠 Tech Stack
-**Frontend**
-- React.js
-- JavaScript (ES6+)
-- Bootstrap / Sass
 
-**Backend**
-- Node.js
-- Express.js
-- Sequelize ORM
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass)
 
-**Database**
-- MySQL
-- Redis
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express)
 
-**Tools & DevOps**
-- Docker
-- Aws
-- Git & GitHub
-- Vite
+### Database
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis)
+
+### DevOps
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws)
 
 ---
 
@@ -78,7 +82,7 @@ A time management app focused on simplicity and efficiency.
 ---
 
 ## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mohab-kamle&show_icons=true&hide_title=true)
+![GitHub Stats](https://github-readme-streak-stats.herokuapp.com?user=mohab-kamle&theme=dark&hide_border=true)
 
 ---
 

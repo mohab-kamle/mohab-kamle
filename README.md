@@ -1,12 +1,11 @@
-# Mohab Kamle
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mohab%20Kamle&fontSize=40&fontColor=ffffff"/>
+</p>
 Software Engineer | React • UI Systems • SaaS Development
 
 ---
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=36BCF7&lines=Frontend+Engineer;Building+SaaS+Systems;React+%7C+Node+%7C+MySQL" />
-</p>
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Mohab%20Kamal&fontSize=40&fontColor=ffffff"/>
+  <img src="https://readme-typing-svg.herokuapp.com?color=ffffff&lines=Frontend+Engineer;Building+SaaS+Systems;React+%7C+Node+%7C+MySQL" />
 </p>
 
 ## 🚀 About Me
@@ -82,13 +81,15 @@ A time management app focused on simplicity and efficiency.
 ---
 
 ## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-streak-stats.herokuapp.com?user=mohab-kamle&theme=dark&hide_border=true)
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=mohab-kamle&theme=dark&hide_border=true" />
+</p>
 
 ---
 
 ## 📫 Contact
 - Email: mohabkamle9@gmail.com
-- LinkedIn: [LINKEDIN_LINK](https://www.linkedin.com/in/mohab-kamle/)
+- LinkedIn: [view](https://www.linkedin.com/in/mohab-kamle/)
 
 ---
 

@@ -1,4 +1,4 @@
-# Mohab Kamal
+# Mohab Kamle
 Software Engineer | React • UI Systems • SaaS Development
 
 ---
@@ -78,7 +78,7 @@ A time management app focused on simplicity and efficiency.
 ---
 
 ## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&hide_title=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mohab-kamle&show_icons=true&hide_title=true)
 
 ---
 
